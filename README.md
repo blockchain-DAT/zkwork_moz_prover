@@ -35,6 +35,10 @@ Options:
 Oneline command to start:
 `./moz_prover --lumozpool moz.asia.zk.work:10010 --mozaddress 0xxxx --custom_name myprover`
 
+If you don't know how to have a Lumoz address, check this [post](https://discord.com/channels/984349855617011712/1301815847760957470/1302924757368573994) in our Discord.
+
+After starting mining, search your Lumoz address in the search bar of the [pool](https://zk.work/en/lumoz) to get the running status of your miners.
+
 ### On Ubuntu
 
 1. Get a Lumoz wallet address.
