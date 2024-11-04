@@ -1,4 +1,5 @@
 # moz_prover
+The prover for [Lumoz Airdrop Event](https://docs.lumoz.org/zkprover-airdrop-event).
 ```shell
 pool_address=moz.asia.zk.work:10010
 ```
