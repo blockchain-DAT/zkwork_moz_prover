@@ -6,6 +6,11 @@ pool_address=moz.asia.zk.work:10010
 
 ## Release-notes
 
+- moz_prover 1.0.2
+  - Forced upgrade, must be upgraded before UTC Tue Nov 12 2024 07:00:00.000
+  - Fix known bugs
+  - The communication protocol has been upgraded to provide a more secure and efficient mining experience.
+
 - moz_prover 1.0.1
   - Add hiveos
 
@@ -43,9 +48,9 @@ After starting mining, search your Lumoz address in the search bar of the [pool]
 ### On Ubuntu
 
 1. Get a Lumoz wallet address.
-2. Download zkwork Nvidia miner: `wget https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.1/moz_prover-v1.0.1_cuda.tar.gz`.
-3. Download zkwork AMD miner: `wget https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.1/moz_prover-v1.0.1_ocl.tar.gz`.
-4. On Nvidia: `tar -zvxf moz_prover-v1.0.1_cuda.tar.gz && cd moz_prover`, on AMD: `tar -zvxf moz_prover-v1.0.1_ocl.tar.gz && cd moz_prover`.
+2. Download zkwork Nvidia miner: `wget https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.2/moz_prover-v1.0.2_cuda.tar.gz`.
+3. Download zkwork AMD miner: `wget https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.2/moz_prover-v1.0.2_ocl.tar.gz`.
+4. On Nvidia: `tar -zvxf moz_prover-v1.0.2_cuda.tar.gz && cd moz_prover`, on AMD: `tar -zvxf moz_prover-v1.0.2_ocl.tar.gz && cd moz_prover`.
 5. Update your Lumoz address in `inner_prover.sh` and set custom name for mining server.
 6. Start mining with `sudo chmod +x run_prover.sh && ./run_prover.sh`.
 7. Check mining log with `tail -f prover.log`.
@@ -54,8 +59,8 @@ After starting mining, search your Lumoz address in the search bar of the [pool]
 
 1. Choose your download url for your gpu.
   ```
-  DOWNLOAD_URL for Nvidia: https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.1/moz_prover-v1.0.1_cuda.tar.gz
-  DOWNLOAD_URL for AMD: https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.1/moz_prover-v1.0.1_ocl.tar.gz
+  DOWNLOAD_URL for Nvidia: https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.2/moz_prover-v1.0.2_cuda.tar.gz
+  DOWNLOAD_URL for AMD: https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.2/moz_prover-v1.0.2_ocl.tar.gz
   ```
 2. Get a Lumoz wallet address.
 3. Add New Flight Sheet with config as follows.
