@@ -79,7 +79,7 @@ inner_prover.sh
 sudo chmod +x run_prover.sh && ./run_prover.sh
 ```
 
-### 7️⃣ Check the Logs
+#### 5️⃣ Check the Logs
 
 ```bash
 tail -f prover.log
