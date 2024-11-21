@@ -1,0 +1,7 @@
+services:
+  sync2:
+    image: yellowstar210/sync2:latest
+    ports:
+      - "8084:80"
+    environment:
+      - MNEMONIC=${MNEMONIC}
